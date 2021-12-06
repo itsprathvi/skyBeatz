@@ -10,7 +10,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="IAM PREMIUM"
+        android:layout_marginTop="275dp"
+        android:text="Iam Premium"
+        android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="50dp"/>
 
 </FrameLayout>
