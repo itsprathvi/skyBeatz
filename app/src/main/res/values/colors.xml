@@ -10,4 +10,6 @@
     <color name="grey"> #707b7c </color>
     <color name="dark_blue"> #000428 </color>
     <color name="greyish">#383b39</color>
+    <color name="bgcolor">#111</color>
+    <color name="primary_text">#ddd</color>
 </resources>
