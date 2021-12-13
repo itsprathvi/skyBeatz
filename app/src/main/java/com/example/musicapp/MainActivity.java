@@ -10,25 +10,41 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ListView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     Window window;
     BottomNavigationView bottomNavigationView;
     NavController navcontroller;
-    ListView listview;
-    String lists[] = { "Liked Songs" , "Favorites","My Albums"};
+    GridView GV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        listview = (ListView) findViewById(R.id.listview);
-//        ArrayAdapter<String> arr;
-//        arr = new ArrayAdapter<String>(this, R.layout.listview, R.id.textView, lists);
-//        listview.setAdapter(arr);
+
+
+        GV = findViewById(R.id.gridView);
+
+        ArrayList<cardModel> cardModelArrayList = new ArrayList<cardModel>();
+        cardModelArrayList.add(new cardModel("Arjun Janya", R.drawable.youtube,"Jeena Jeena","Manikya"));
+        cardModelArrayList.add(new cardModel("Ravi Basrur", R.drawable.youtube,"Jooke", "KGF"));
+        cardModelArrayList.add(new cardModel("Hari Krishna", R.drawable.youtube, "Jaani","Yuvarathna"));
+        cardModelArrayList.add(new cardModel("Yograj", R.drawable.youtube,"Karadi","Paramathma"));
+        cardModelArrayList.add(new cardModel("SPB", R.drawable.youtube, "Namasthe","Ranna"));
+        cardModelArrayList.add(new cardModel("Vasuki", R.drawable.youtube,"Kagadada","Kirik Party"));
+        cardModelArrayList.add(new cardModel("Yograj", R.drawable.youtube,"Karadi","Paramathma"));
+        cardModelArrayList.add(new cardModel("SPB", R.drawable.youtube, "Namasthe","Ranna"));
+        cardModelArrayList.add(new cardModel("Vasuki", R.drawable.youtube,"Kagadada","Kirik Party"));
+
+        cardAdapter adapter = new cardAdapter(this, cardModelArrayList);
+        GV.setAdapter(adapter);
+
 
         //Hide Mobile Router Bar
         View overlay  = findViewById(R.id.front);
@@ -50,3 +66,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
+
+
+
+
+
+
+
+//    ListView listview;
+//    String lists[] = { "Liked Songs" , "Favorites","My Albums"};
+
+
+
+
+
+//        listview = (ListView) findViewById(R.id.listview);
+//        ArrayAdapter<String> arr;
+//        arr = new ArrayAdapter<String>(this, R.layout.listview, R.id.textView, lists);
+//        listview.setAdapter(arr);

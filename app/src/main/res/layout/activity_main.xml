@@ -10,12 +10,12 @@
 
     <ScrollView
         android:layout_width="411dp"
-        android:layout_height="753dp"
+        android:layout_height="670dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="-2dp">
+        tools:ignore="MissingConstraints">
+    </ScrollView>
 
         <fragment
             android:id="@+id/fragmentContainerView"
@@ -31,7 +31,6 @@
             app:layout_constraintVertical_bias="0.0"
             app:navGraph="@navigation/nav_bar"
             tools:ignore="FragmentTagUsage" />
-    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

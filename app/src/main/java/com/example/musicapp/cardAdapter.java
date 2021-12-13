@@ -1,0 +1,37 @@
+package com.example.musicapp;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import java.util.ArrayList;
+
+public class cardAdapter extends ArrayAdapter<cardModel> {
+    public cardAdapter(@NonNull Context context, ArrayList<cardModel> cardModelArrayList) {
+        super(context, 0, cardModelArrayList);
+    }
+
+    @NonNull
+    @Override
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        View listitemView = convertView;
+        if (listitemView == null) {
+            listitemView = LayoutInflater.from(getContext()).inflate(R.layout.card_view, parent, false);
+        }
+        cardModel cardModel = getItem(position);
+        TextView TV1 = listitemView.findViewById(R.id.textView1);
+        TextView TV2 = listitemView.findViewById(R.id.textView2);
+        TextView TV3 = listitemView.findViewById(R.id.textView3);
+        ImageView IV = listitemView.findViewById(R.id.img1);
+        TV1.setText(cardModel.getTrackName() );
+        TV2.setText(cardModel.getMovie() );
+        TV3.setText(cardModel.getArtist() );
+        IV.setImageResource(cardModel.getImgid());
+        return listitemView;
+    }
+}
