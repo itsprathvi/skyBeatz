@@ -3,11 +3,11 @@ package com.example.musicapp;
 public class cardModel {
 
     public String artist;
-    public int imgid;
+    public String imgid;
     public String trackname;
     public String moviename;
 
-    public cardModel(String artist, int imgid, String trackname, String moviename) {
+    public cardModel(String artist, String imgid, String trackname, String moviename) {
         this.artist = artist;
         this.imgid = imgid;
         this.trackname = trackname;
@@ -22,11 +22,11 @@ public class cardModel {
         this.artist = artist;
     }
 
-    public int getImgid() {
+    public String getImgid() {
         return imgid;
     }
 
-    public void setImgid(int imgid) {
+    public void setImgid(String imgid) {
         this.imgid = imgid;
     }
 

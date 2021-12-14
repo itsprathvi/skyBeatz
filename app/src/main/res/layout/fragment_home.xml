@@ -3,35 +3,110 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#111"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
     tools:context=".home">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="clip_horizontal|center|top"
         android:orientation="horizontal"
         android:textAlignment="center">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="20dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight=".25"
             android:src="@drawable/favicon" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="194dp"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".75"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="194dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:fontFamily="@font/archivo_black"
+                android:letterSpacing="0.1"
+                android:text="SkyBeatz"
+                android:textColor="@color/primary_text"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/jura_light"
+                android:text="Feel The Beats"
+                android:textColor="#989797" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_gravity="start"
+        android:layout_margin="@dimen/_20sdp"
+        android:background="@drawable/shape"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight=".1"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:scaleType="center"
+            android:src="@drawable/ic_baseline_search_24"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="48dp"
             android:layout_gravity="center"
-            android:layout_weight="1"
-            android:fontFamily="@font/archivo_black"
-            android:text="SkyBeatz"
-            android:textAlignment="center"
-            android:textColor="@color/primary_text"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:hint="Search for a Song"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="#aaaaaa"
+            android:textColorHint="#aaa"
+            android:textSize="20sp"
+            android:autofillHints="true" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2196F3"
+            android:text="🔍" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gridView"
+            android:horizontalSpacing="6dp"
+            android:numColumns="2"
+            android:verticalSpacing="6dp" />
+
     </LinearLayout>
 </LinearLayout>

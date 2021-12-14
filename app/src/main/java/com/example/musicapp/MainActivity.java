@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     NavController navcontroller;
     GridView GV;
+    ArrayList<cardModel> cardModelArrayList = new ArrayList<cardModel>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,16 +32,15 @@ public class MainActivity extends AppCompatActivity {
 
         GV = findViewById(R.id.gridView);
 
-        ArrayList<cardModel> cardModelArrayList = new ArrayList<cardModel>();
-        cardModelArrayList.add(new cardModel("Arjun Janya", R.drawable.youtube,"Jeena Jeena","Manikya"));
-        cardModelArrayList.add(new cardModel("Ravi Basrur", R.drawable.youtube,"Jooke", "KGF"));
-        cardModelArrayList.add(new cardModel("Hari Krishna", R.drawable.youtube, "Jaani","Yuvarathna"));
-        cardModelArrayList.add(new cardModel("Yograj", R.drawable.youtube,"Karadi","Paramathma"));
-        cardModelArrayList.add(new cardModel("SPB", R.drawable.youtube, "Namasthe","Ranna"));
-        cardModelArrayList.add(new cardModel("Vasuki", R.drawable.youtube,"Kagadada","Kirik Party"));
-        cardModelArrayList.add(new cardModel("Yograj", R.drawable.youtube,"Karadi","Paramathma"));
-        cardModelArrayList.add(new cardModel("SPB", R.drawable.youtube, "Namasthe","Ranna"));
-        cardModelArrayList.add(new cardModel("Vasuki", R.drawable.youtube,"Kagadada","Kirik Party"));
+        cardModelArrayList.add(new cardModel("Arjun Janya", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Jeena Jeena","Manikya"));
+        cardModelArrayList.add(new cardModel("Ravi Basrur", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Jooke", "KGF"));
+        cardModelArrayList.add(new cardModel("Hari Krishna", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576", "Jaani","Yuvarathna"));
+        cardModelArrayList.add(new cardModel("Yograj", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Karadi","Paramathma"));
+        cardModelArrayList.add(new cardModel("SPB", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576", "Namasthe","Ranna"));
+        cardModelArrayList.add(new cardModel("Vasuki", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Kagadada","Kirik Party"));
+        cardModelArrayList.add(new cardModel("Yograj", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Karadi","Paramathma"));
+        cardModelArrayList.add(new cardModel("SPB", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576", "Namasthe","Ranna"));
+        cardModelArrayList.add(new cardModel("Vasuki", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Kagadada","Kirik Party"));
 
         cardAdapter adapter = new cardAdapter(this, cardModelArrayList);
         GV.setAdapter(adapter);
@@ -64,6 +64,16 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(bottomNavigationView, navcontroller);
         //
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (cardModelArrayList != null && cardModelArrayList.size() > 0) {
+            cardAdapter adapter = new cardAdapter(this, cardModelArrayList);
+            GV.setAdapter(adapter);
+            adapter.notifyDataSetChanged();
+        }
     }
 }
 
