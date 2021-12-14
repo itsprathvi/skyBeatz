@@ -1,6 +1,8 @@
 package com.example.musicapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
@@ -15,13 +17,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ListView;
-
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONArray;
@@ -60,15 +55,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        cardModelArrayList.add(new cardModel("Arjun Janya", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Jeena Jeena","Manikya"));
-//        cardModelArrayList.add(new cardModel("Ravi Basrur", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Jooke", "KGF"));
-//        cardModelArrayList.add(new cardModel("Hari Krishna", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576", "Jaani","Yuvarathna"));
-//        cardModelArrayList.add(new cardModel("Yograj", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Karadi","Paramathma"));
-//        cardModelArrayList.add(new cardModel("SPB", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576", "Namasthe","Ranna"));
-//        cardModelArrayList.add(new cardModel("Vasuki", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Kagadada","Kirik Party"));
-//        cardModelArrayList.add(new cardModel("Yograj", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Karadi","Paramathma"));
-//        cardModelArrayList.add(new cardModel("SPB", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576", "Namasthe","Ranna"));
-//        cardModelArrayList.add(new cardModel("Vasuki", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Kagadada","Kirik Party"));
         cardAdapter adapter = new cardAdapter(this, cardModelArrayList);
         GV.setAdapter(adapter);
 
@@ -78,12 +64,14 @@ public class MainActivity extends AppCompatActivity {
         overlay.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_FULLSCREEN);
         //
 
+
         // Navigation bar Color Change
         if(Build.VERSION.SDK_INT>=21){
             window = this.getWindow();
             window.setStatusBarColor(this.getResources().getColor(R.color.black));
         }
         //
+
 
         // Routed Fragments of Navbar
         navcontroller = Navigation.findNavController(this, R.id.fragmentContainerView);
@@ -93,15 +81,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        if (cardModelArrayList != null && cardModelArrayList.size() > 0) {
-//            cardAdapter adapter = new cardAdapter(this, cardModelArrayList);
-//            GV.setAdapter(adapter);
-//            adapter.notifyDataSetChanged();
-//        }
-//    }
 
     private void getSongs(String songName) {
         String URL = "https://spotify-artist-api.herokuapp.com/track/" + songName;
@@ -135,10 +114,15 @@ public class MainActivity extends AppCompatActivity {
                     Log.e(TAG, "onResponse: Error of api");
                     error.printStackTrace();
                 });
-
         mQueue.add(request);
     }
 }
+
+
+
+
+
+
 
 
 
@@ -150,10 +134,18 @@ public class MainActivity extends AppCompatActivity {
 //    String lists[] = { "Liked Songs" , "Favorites","My Albums"};
 
 
-
-
-
 //        listview = (ListView) findViewById(R.id.listview);
 //        ArrayAdapter<String> arr;
 //        arr = new ArrayAdapter<String>(this, R.layout.listview, R.id.textView, lists);
 //        listview.setAdapter(arr);
+
+
+//        cardModelArrayList.add(new cardModel("Arjun Janya", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Jeena Jeena","Manikya"));
+//        cardModelArrayList.add(new cardModel("Ravi Basrur", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Jooke", "KGF"));
+//        cardModelArrayList.add(new cardModel("Hari Krishna", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576", "Jaani","Yuvarathna"));
+//        cardModelArrayList.add(new cardModel("Yograj", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Karadi","Paramathma"));
+//        cardModelArrayList.add(new cardModel("SPB", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576", "Namasthe","Ranna"));
+//        cardModelArrayList.add(new cardModel("Vasuki", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Kagadada","Kirik Party"));
+//        cardModelArrayList.add(new cardModel("Yograj", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Karadi","Paramathma"));
+//        cardModelArrayList.add(new cardModel("SPB", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576", "Namasthe","Ranna"));
+//        cardModelArrayList.add(new cardModel("Vasuki", "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576","Kagadada","Kirik Party"));

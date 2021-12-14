@@ -103,11 +103,12 @@
         <GridView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="22dp"
             android:id="@+id/gridView"
-            android:horizontalSpacing="3dp"
+            android:horizontalSpacing="15dp"
             android:numColumns="2"
-            android:verticalSpacing="5dp"
-            android:paddingBottom="40dp"/>
+            android:verticalSpacing="15dp"
+            android:paddingBottom="90dp"/>
 
     </LinearLayout>
     <TextView
