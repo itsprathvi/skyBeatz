@@ -2,8 +2,11 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/</item>
+        <item>@font/actor</item>
         <item>@font/archivo_black</item>
+        <item>@font/arsenal</item>
         <item>@font/bowlby_one</item>
+        <item>@font/didact_gothic</item>
         <item>@font/jura_light</item>
     </array>
 </resources>

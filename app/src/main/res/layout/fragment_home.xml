@@ -74,6 +74,7 @@
             android:textAlignment="center" />
 
         <EditText
+            android:id="@+id/search_bar"
             android:layout_width="0dp"
             android:layout_weight="0.7"
             android:layout_height="48dp"
@@ -87,14 +88,13 @@
             android:autofillHints="true" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/search_button"
             android:layout_width="0dp"
+            android:layout_height="36dp"
             android:layout_weight="0.2"
-            android:layout_height="wrap_content"
             android:backgroundTint="#2196F3"
             android:text="🔍" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -104,9 +104,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/gridView"
-            android:horizontalSpacing="6dp"
+            android:horizontalSpacing="3dp"
             android:numColumns="2"
-            android:verticalSpacing="6dp" />
+            android:verticalSpacing="5dp"
+            android:paddingBottom="40dp"/>
 
     </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Made With ❣️by P-Cube"
+        android:textSize="20dp"
+        android:textColor="#aaa"
+        android:layout_marginBottom="200dp"
+        />
 </LinearLayout>

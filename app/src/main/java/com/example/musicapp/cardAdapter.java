@@ -34,14 +34,12 @@ public class cardAdapter extends ArrayAdapter<cardModel> {
         }
         cardModel cardModel = getItem(position);
         TextView TV1 = listitemView.findViewById(R.id.textView1);
-        TextView TV2 = listitemView.findViewById(R.id.textView2);
-        TextView TV3 = listitemView.findViewById(R.id.textView3);
+        TextView TV2 = listitemView.findViewById(R.id.textView3);
         ImageView IV = listitemView.findViewById(R.id.img1);
         TV1.setText(cardModel.getTrackName() );
-        TV2.setText(cardModel.getMovie() );
-        TV3.setText(cardModel.getArtist() );
+        TV2.setText(cardModel.getArtist() );
 //        IV.setImageResource(cardModel.getImgid());
-        String imgUrl = "https://i.scdn.co/image/ab6761610000e5ebc02d416c309a68b04dc94576";
+        String imgUrl = cardModel.imgid;
         Picasso.get().load(imgUrl).into(IV);
         return listitemView;
     }

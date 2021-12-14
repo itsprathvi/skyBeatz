@@ -8,15 +8,6 @@
     android:background="@color/bgcolor"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:layout_width="411dp"
-        android:layout_height="670dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
-    </ScrollView>
-
         <fragment
             android:id="@+id/fragmentContainerView"
             android:name="androidx.navigation.fragment.NavHostFragment"
