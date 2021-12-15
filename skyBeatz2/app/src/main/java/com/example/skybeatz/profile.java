@@ -4,14 +4,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class profile extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+    Window window;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,5 +46,18 @@ public class profile extends AppCompatActivity {
                 return false;
             }
         });
+
+        //Hide Mobile Router Bar
+//        View overlay  = findViewById(R.id.front);
+//        overlay.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION| View.SYSTEM_UI_FLAG_FULLSCREEN);
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION| View.SYSTEM_UI_FLAG_FULLSCREEN);
+//        overlay.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_FULLSCREEN);
+        //
+
+
+        // full screens
+        // Navigation bar Color Change
+        window = this.getWindow();
+        window.setStatusBarColor(this.getResources().getColor(R.color.black));
     }
 }
