@@ -16,7 +16,8 @@ public class Temp {
     }
 
     private String songName;
-    private cardAdapter arrayList;
+    private cardAdapter cardAdptr;
+    private ArrayList<cardModel> arrayList;
 
     public String  getSongName() {
         return songName;
@@ -24,10 +25,18 @@ public class Temp {
     public void setSongName(String songName) {
         this.songName = songName;
     }
-    public cardAdapter  getArrayList() {
-        return arrayList;
+    public cardAdapter  getCardAdptr() {
+        return cardAdptr;
     }
-    public void setArrayList(cardAdapter  arrayList) {
-        this.arrayList = arrayList;
+    public void setCardAdptr(cardAdapter  arrayList) {
+        this.cardAdptr = arrayList;
+    }
+
+    public void setArrayList(ArrayList<cardModel> obj){
+        this.arrayList = obj;
+    }
+
+    public ArrayList<cardModel> getArrayList(){
+        return  this.arrayList;
     }
 }
