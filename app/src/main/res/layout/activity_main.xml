@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/front"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        tools:context=".home">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="clip_horizontal|center|top"
+            android:orientation="horizontal"
+            android:textAlignment="center">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:src="@drawable/favicon" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".75"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="194dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/archivo_black"
+                    android:letterSpacing="0.1"
+                    android:text="SkyBeatz"
+                    android:textColor="@color/primary_text"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/jura_light"
+                    android:paddingLeft="15dp"
+                    android:text="Feel The Beats"
+                    android:textColor="#989797" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_gravity="start"
+            android:layout_margin="20dp"
+            android:background="@drawable/shape"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:scaleType="center"
+                android:src="@drawable/ic_baseline_search_24"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:hint="Search for a Song"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#aaaaaa"
+                android:textColorHint="#aaa"
+                android:textSize="20sp"
+                android:autofillHints="true" />
+
+            <Button
+                android:id="@+id/search_button"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="0.2"
+                android:backgroundTint="#2196F3"
+                android:textColor="@color/white"
+                android:text="go" />
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/layout_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/artist_div"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_corner2"
+                android:padding="20dp"
+                android:orientation="horizontal"
+                >
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/artist_img"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:requiresFadingEdge="vertical"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:civ_border_color="#3f51b5"
+                    app:civ_border_width="4dp"
+                    android:src="@drawable/prathvi"
+                    tools:ignore="MissingClass" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/artist_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pranava Adiga"
+                        android:textColor="#d3d3d3"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="27dp"
+                        android:fontFamily="@font/archivo_black"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="20M listners"
+                        android:textColor="#787474"
+                        android:layout_marginTop="18dp"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="14dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <com.example.skybeatz.ExpandableHeightGridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:layout_marginLeft="22dp"
+                android:id="@+id/gridView"
+                android:horizontalSpacing="15dp"
+                android:layout_below="@+id/artist_div"
+                android:numColumns="2"
+                android:verticalSpacing="15dp"/>
+
+            <TextView
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gridView"
+                android:text="Made With ❣️by P-Cube"
+                android:textAlignment="center"
+                android:textColor="#aaa"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/rounded_corner"
+        app:itemTextColor="@drawable/selector"
+        app:itemRippleColor="@color/white"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="#cfcfcf"
+        app:menu="@menu/menu" />
+
+
+</RelativeLayout>
