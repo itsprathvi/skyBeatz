@@ -17,7 +17,7 @@ public class Temp {
 
     private String songName;
     private cardAdapter cardAdptr;
-    private ArrayList<cardModel> arrayList;
+    private ArrayList<cardModel> arrayList = new ArrayList<>();
 
     public String  getSongName() {
         return songName;

@@ -37,10 +37,10 @@ public class cardAdapter extends ArrayAdapter<cardModel> {
         TextView TV1 = listitemView.findViewById(R.id.textView1);
         TextView TV2 = listitemView.findViewById(R.id.textView3);
         ImageView IV = listitemView.findViewById(R.id.img1);
-        TV1.setText(cardModel.getTrackName() );
-        TV2.setText(cardModel.getArtist() );
+        TV1.setText(cardModel.getName() );
+        TV2.setText(cardModel.getArtistName() );
 //        IV.setImageResource(cardModel.getImgid());
-        String imgUrl = cardModel.imgid;
+        String imgUrl = cardModel.getImg_url();
         Picasso.get().load(imgUrl).into(IV);
         return listitemView;
     }
