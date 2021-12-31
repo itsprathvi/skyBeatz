@@ -1,13 +1,10 @@
 package com.example.skybeatz;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,11 +12,13 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -34,7 +33,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.prefs.AbstractPreferences;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MAin Activity";
@@ -53,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     TextView artistName;
     ImageView artistImg;
     Artist artist;
+    MediaPlayer mediaPlayer;
 
     private ArraySaver saver;
     SharedPreferences.Editor editor;
@@ -71,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
         artist = new Artist();
         artistName = findViewById(R.id.artist_name);
         artistImg = findViewById(R.id.artist_img);
+        // initializing media player
+        mediaPlayer = new MediaPlayer();
 
         // if not searching for artist hide the artistDiv
         if(!searchingArtist){
@@ -182,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("artistName", cardModelArrayList.get(position).getArtistName());
                 intent.putExtra("artistId", cardModelArrayList.get(position).getArtist_id());
                 intent.putExtra("preview_url", cardModelArrayList.get(position).getPrev_url());
+//                intent.putExtra("mediaPlayer", mediaPlayer);
                 startActivity(intent);
             }
         });
