@@ -33,6 +33,8 @@ public class song extends AppCompatActivity {
         back = findViewById(R.id.back_button);
         play = findViewById(R.id.play);
         pause = findViewById(R.id.pause);
+        // initializing media player
+        mediaPlayer = new MediaPlayer();
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +46,10 @@ public class song extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                playAudio();
+
+                if(! mediaPlayer.isPlaying()){
+                    playAudio();
+                }
             }
         });
 
@@ -80,9 +85,6 @@ public class song extends AppCompatActivity {
     private void playAudio() {
 
         String audioUrl = intent.getStringExtra("preview_url");
-
-        // initializing media player
-        mediaPlayer = new MediaPlayer();
 
         // below line is use to set the audio
         // stream type for our media player.
