@@ -31,7 +31,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/jura_light"
+            android:fontFamily="@font/baloo"
             android:text="PRATHVIRAJ PRABHU"
             android:textAlignment="center"
             android:textColor="@color/grey"
@@ -49,15 +49,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp">
-
-        <ListView
-            android:id="@+id/listview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:divider="@color/grey"
-            android:dividerHeight="1dp" />
-
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="   ⭐   Favorites"
+            android:fontFamily="@font/baloo"
+            android:textSize="30dp"
+            android:gravity="center_vertical"
+            android:background="@color/greyish"/>
+        <TextView
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_width="380dp"
+            android:layout_height="70dp"
+            android:text="   🎶   My Albums"
+            android:fontFamily="@font/baloo"
+            android:textSize="30dp"
+            android:gravity="center_vertical"
+            android:background="@color/greyish"/>
     </LinearLayout>
     </LinearLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView

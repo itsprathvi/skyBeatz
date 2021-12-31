@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +20,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -133,26 +137,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////   Hide the default app nav bar and change the top color and remove bottom nav   //////////////////
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        //Hide Mobile Router Bar
-        View overlay  = findViewById(R.id.front);
-        overlay.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_FULLSCREEN);
-        //
+//        //Hide Mobile Router Bar
+//        View overlay  = findViewById(R.id.front);
+//        overlay.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_FULLSCREEN);
+//        //
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
         // full screens
         // Navigation bar Color Change
-        if(Build.VERSION.SDK_INT>=21){
-            window = this.getWindow();
-            window.setStatusBarColor(this.getResources().getColor(R.color.black));
-        }
-        //action bar hiding
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
-        }
+
+//        if(Build.VERSION.SDK_INT>=21){
+        window = this.getWindow();
+        window.setStatusBarColor(this.getResources().getColor(R.color.black));
+//        }
+//        //action bar hiding
+//        if (getSupportActionBar() != null) {
+//
+//        }
 
     }
 

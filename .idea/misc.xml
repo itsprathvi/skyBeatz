@@ -20,8 +20,12 @@
         <entry key="..\:/Users/prana/AndroidStudioProjects/skyBeatz2/app/src/main/res/menu/menu.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/background_color.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/premium.xml" value="0.20974358974358975" />
-        <entry key="app/src/main/res/layout/activity_premium.xml" value="0.11820652173913043" />
-        <entry key="app/src/main/res/layout/activity_song.xml" value="0.11820652173913043" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_premium.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.1671195652173913" />
+        <entry key="app/src/main/res/layout/activity_song.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1671195652173913" />
+        <entry key="app/src/main/res/layout/card_view.xml" value="0.1671195652173913" />
       </map>
     </option>
   </component>
