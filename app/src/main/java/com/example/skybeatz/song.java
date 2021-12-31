@@ -7,6 +7,7 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,6 +23,7 @@ public class song extends AppCompatActivity {
     Button back, play, pause;
     MediaPlayer mediaPlayer;
     Intent intent;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

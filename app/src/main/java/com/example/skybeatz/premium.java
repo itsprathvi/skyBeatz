@@ -9,12 +9,15 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class premium extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+    Button bt;
     Window window;
 
     @Override
@@ -24,6 +27,7 @@ public class premium extends AppCompatActivity {
 
         bottomNavigationView =  findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.premium2);
+        bt = findViewById(R.id.button);
 
 //        bottomNavigationView.setOnNavigationItemSelectedListener();
 
@@ -55,5 +59,13 @@ public class premium extends AppCompatActivity {
         // Navigation bar Color Change
         window = this.getWindow();
         window.setStatusBarColor(this.getResources().getColor(R.color.black));
+
+
+        bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Coming Soon!", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
