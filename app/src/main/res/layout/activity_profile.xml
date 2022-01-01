@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     tools:context=".profile"
-    android:background="#111">
+    android:background="@drawable/background_color">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
