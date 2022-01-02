@@ -3,14 +3,14 @@
 <p align="center"><a href="https://github.com/itsprathvi/skyBeatz/" align="center"><img height="100" width="100" src="https://i.ibb.co/985tn8s/skybeatz4.png" alt="skybeatz4" border="1"></a></p>
 
 <p class="text-center mb-3" align="center">
-   <a><img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/PrathvirajPrabhu/skyBeatz?style=for-the-badge"></a>
-   <a><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/PrathvirajPrabhu/skyBeatz?color=F89600&label=Repository%20Size&style=for-the-badge"</a>
-   <a><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/PrathvirajPrabhu/skyBeatz?style=for-the-badge"</a></p>
+   <a><img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/itsprathvi/skyBeatz?style=for-the-badge"></a>
+   <a><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/itsprathvi/skyBeatz?style=for-the-badge"</a>
+   <a><img alt="GitHub language count" src="https://img.shields.io/github/languages/count/itsprathvi/skyBeatz?style=for-the-badge"</a></p>
 
 <p class="text-center mb-3" align="center">
-   <a href="https://ocr-converter.herokuapp.com/"><img src="https://forthebadge.com/images/badges/made-with-python.svg" border="0" title="Made with Java" /></a></p>
+   <a href="https://github.com/itsprathvi/skyBeatz"><img src="https://img.shields.io/badge/MADE%20WITH-JAVA-yellow" border="0" title="Made with Java" /></a></p>
 <p class="text-center mb-3" align="center">
-   <a href="https://pypi.org/project/Flask/"><img alt="Powered by Android" src="https://img.shields.io/badge/POWERED%20BY-Flask%3D%3D1.1.2-orange"></a>
+   <a href="https://pypi.org/project/Flask/"><img alt="Powered by Android" src="shorturl.at/emA39"></a>
 </p>
 <p class="text-center mb-3" align="center">
 <a href="http://www.djangoproject.com/"><img src="https://myrusakov.ru/images/articles/python-flask-framework-intro.png" border="0" alt="Powered by Pcube" title="Powered by Pcube" /></a>
