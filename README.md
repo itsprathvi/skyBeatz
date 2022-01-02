@@ -10,7 +10,7 @@
 <p class="text-center mb-3" align="center">
    <a href="https://github.com/itsprathvi/skyBeatz"><img src="https://img.shields.io/badge/MADE%20WITH-JAVA-yellow" border="0" title="Made with Java" /></a></p>
 <p class="text-center mb-3" align="center">
-   <a href="https://pypi.org/project/Flask/"><img alt="Powered by Android" src="shorturl.at/emA39"></a>
+   <a href="https://pypi.org/project/Flask/"><img alt="Powered by Android" src="https://i.ytimg.com/vi/beaIcbHBUqg/maxresdefault.jpg"></a>
 </p>
 <p class="text-center mb-3" align="center">
 <a href="http://www.djangoproject.com/"><img src="https://myrusakov.ru/images/articles/python-flask-framework-intro.png" border="0" alt="Powered by Pcube" title="Powered by Pcube" /></a>
