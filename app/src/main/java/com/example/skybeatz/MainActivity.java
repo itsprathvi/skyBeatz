@@ -184,12 +184,14 @@ public class MainActivity extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(), "clicked" + position,Toast.LENGTH_LONG);
                 Intent intent = new Intent(getApplicationContext(), song.class);
+                intent.putExtra("position", position);
+                intent.putExtra("songs", cardModelArrayList);
 //                intent.putExtra("songObj", cardModelArrayList.get(position));
-                intent.putExtra("songName", cardModelArrayList.get(position).getName());
-                intent.putExtra("songImg", cardModelArrayList.get(position).getImg_url());
-                intent.putExtra("artistName", cardModelArrayList.get(position).getArtistName());
-                intent.putExtra("artistId", cardModelArrayList.get(position).getArtist_id());
-                intent.putExtra("preview_url", cardModelArrayList.get(position).getPrev_url());
+//                intent.putExtra("songName", cardModelArrayList.get(position).getName());
+//                intent.putExtra("songImg", cardModelArrayList.get(position).getImg_url());
+//                intent.putExtra("artistName", cardModelArrayList.get(position).getArtistName());
+//                intent.putExtra("artistId", cardModelArrayList.get(position).getArtist_id());
+//                intent.putExtra("preview_url", cardModelArrayList.get(position).getPrev_url());
 //                intent.putExtra("mediaPlayer", mediaPlayer);
                 startActivity(intent);
             }

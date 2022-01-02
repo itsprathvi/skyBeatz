@@ -28,13 +28,13 @@
             android:layout_height="78dp"
             android:orientation="horizontal">
 
-            <Button
+            <ImageView
+                android:src="@drawable/ic_back"
                 android:id="@+id/back_button"
                 android:layout_width="72dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/material_on_surface_stroke"
-                android:text="@string/go_back"
                 android:layout_marginLeft="15dp"
                 android:textColor="#ACAAAA"
                 android:textSize="40dp" />
@@ -75,29 +75,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="105dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:orientation="horizontal">
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="23dp"
+                    android:outlineAmbientShadowColor="@color/white"
+                    />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/play"
-                android:layout_margin="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="75dp"
-                android:backgroundTint="#F6C01E"
-                android:textSize="20dp"
-                android:layout_weight="1"
-                android:textColor="#575454"
-                android:text="Play" />
 
-            <Button
-                android:id="@+id/pause"
-                android:layout_width="wrap_content"
-                android:backgroundTint="#FFC107"
-                android:layout_height="78dp"
-                android:layout_margin="20dp"
-                android:textSize="20dp"
-                android:layout_weight="1"
-                android:textColor="#575454"
-                android:text="Pause" />
         </LinearLayout>
     </LinearLayout>
 

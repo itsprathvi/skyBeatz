@@ -179,7 +179,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/gridView"
                 android:text="Made With ❣️by P-Cube"
-                android:fontFamily="@font/carter_one"
+                android:fontFamily="@font/antic"
                 android:textAlignment="center"
                 android:textColor="#aaa"
                 android:textSize="20dp"
