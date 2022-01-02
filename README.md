@@ -15,7 +15,7 @@
 </p>
       
 <p class="text-center mb-3" align="center">
-   <a href="https://github.com/itsprathvi/skyBeatz/"><img height="200" width="100" alt="Powered by Android" src="https://www.nicepng.com/png/full/300-3009128_download-andro-android-os-logo-png.png"></a>
+   <a href="https://github.com/itsprathvi/skyBeatz/"><img height="200" width="150" alt="Powered by Android" src="https://www.nicepng.com/png/full/300-3009128_download-andro-android-os-logo-png.png"></a>
 </p>
 
 <p align="center">
