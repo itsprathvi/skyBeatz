@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,7 +30,9 @@ public class song extends AppCompatActivity {
     public static MediaPlayer mediaPlayer;
     ArrayList<cardModel> cardModelArrayList = new ArrayList<cardModel>();
     BottomNavigationView bottomNavigationView;
+    SeekBar sk;
     int position;
+    Thread updateseekbar;
     Intent intent;
 
     public void setTimeout(Runnable runnable, int delay){
@@ -56,6 +59,7 @@ public class song extends AppCompatActivity {
         play = findViewById(R.id.play);
         play_next = findViewById(R.id.skip_next);
         play_prev = findViewById(R.id.skip_prev);
+        sk = findViewById(R.id.seek_bar);
         intent = getIntent();
         Bundle bundle = intent.getExtras();
         position = bundle.getInt("position");
@@ -141,6 +145,11 @@ public class song extends AppCompatActivity {
                         mediaPlayer.stop();
                         mediaPlayer.release();
                     }
+                    sk.setProgress(0);
+                    sk.setMax(1);
+                    if(updateseekbar != null || updateseekbar.isAlive()){
+                        updateseekbar.interrupt();
+                    }
                     position = (position+1)%cardModelArrayList.size();
                     loadSong();
                     mediaPlayer = new MediaPlayer();
@@ -154,6 +163,11 @@ public class song extends AppCompatActivity {
                     if(!(mediaPlayer ==null)) {
                         mediaPlayer.stop();
                         mediaPlayer.release();
+                    }
+                sk.setProgress(0);
+                sk.setMax(1);
+                    if(updateseekbar != null || updateseekbar.isAlive()){
+                        updateseekbar.interrupt();
                     }
                     position = (position - 1)<0?cardModelArrayList.size()-1: position-1;
                     loadSong();
@@ -190,9 +204,49 @@ public class song extends AppCompatActivity {
             play.setImageResource(R.drawable.ic_pause);
             // below line is use to display a toast message.
             Toast.makeText(this, "Audio started playing..", Toast.LENGTH_SHORT).show();
+
+            updateseekbar =  new Thread(){
+                @Override
+                public void run() {
+                    int totalDuration = mediaPlayer.getDuration();
+                    int currentPosition = 0;
+                    while (currentPosition< totalDuration){
+                        try {
+                            sleep(500);
+                            currentPosition = mediaPlayer.getCurrentPosition();
+                            sk.setMax(mediaPlayer.getDuration());
+                            sk.setProgress(currentPosition);
+                        }catch (Exception e){
+                            e.printStackTrace();
+                        }
+                    }
+                    super.run();
+                }
+            };
+            sk.setMax(mediaPlayer.getDuration());
+            updateseekbar.start();
+
+            sk.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                @Override
+                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+                }
+
+                @Override
+                public void onStartTrackingTouch(SeekBar seekBar) {
+
+                }
+
+                @Override
+                public void onStopTrackingTouch(SeekBar seekBar) {
+//                    Log.e("TAG", "onStopTrackingTouch: "+seekBar.getProgress() );
+                    mediaPlayer.seekTo(seekBar.getProgress());
+                }
+            });
             mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
                 public void onCompletion(MediaPlayer mp) {
+                    updateseekbar.interrupt();
                     play_next.performClick();
                 }
             });
