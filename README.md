@@ -2,7 +2,7 @@
 <h4 align="center">Spotify clone Music App Developed by us for Android Mobiles</h4> 
 <h6 align="center">Using Java and XML in Android Studio</h4>
 
-<p align="center"><a href="https://github.com/itsprathvi/skyBeatz/" align="center"><img height="100" width="100" src="https://i.ibb.co/985tn8s/skybeatz4.png" alt="skybeatz4" border="1"></a></p>
+<p align="center"><a href="https://github.com/itsprathvi/skyBeatz/" align="center"><img height="100" width="100" src="https://i.ibb.co/985tn8s/skybeatz4.png" alt="skybeatz4" border="5"></a></p>
 
 <p class="text-center mb-3" align="center">
    <a><img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/itsprathvi/skyBeatz?style=for-the-badge"></a>
