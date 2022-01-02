@@ -1,4 +1,4 @@
-<h1 align="center">SkyBeatz Music App</h1>
+<h2 align="center">Sky Beatz</h2>
 <h4 align="center">Spotify clone Music App Developement</h4> 
 <h6 align="center">Using Java and XML in Android Studio</h4>
 
