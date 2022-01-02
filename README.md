@@ -10,10 +10,8 @@
 <p class="text-center mb-3" align="center">
    <a href="https://github.com/itsprathvi/skyBeatz"><img src="https://img.shields.io/badge/MADE%20WITH-JAVA-yellow" border="0" title="Made with Java" /></a></p>
 <p class="text-center mb-3" align="center">
-   <a href="https://pypi.org/project/Flask/"><img height="100" width="100" alt="Powered by Android" src="https://i.ytimg.com/vi/beaIcbHBUqg/maxresdefault.jpg"></a>
+   <a href="https://github.com/itsprathvi/skyBeatz/"><img height="200" width="300" alt="Powered by Android" src="https://i.ytimg.com/vi/beaIcbHBUqg/maxresdefault.jpg"></a>
 </p>
-<p class="text-center mb-3" align="center">
-<a href="http://www.djangoproject.com/"><img src="https://myrusakov.ru/images/articles/python-flask-framework-intro.png" border="0" alt="Powered by Pcube" title="Powered by Pcube" /></a>
 </p>
 <p align="center">
     Ever felt a need for an assistant who could help you in typing the text from real images? Here you have got the OCR BOX to the rescue. This website with the OCR BOX not only helps you to extract the texts from the images but also translates them to the desired language. The translation option ranges for about 106 languages in the world. The icing on the cake is that the content in the image can be converted to an audio file. The user-friendly UI simplifies your task of extraction and conversion.
