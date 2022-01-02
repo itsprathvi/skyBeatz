@@ -15,9 +15,9 @@
 </p>
       
 <p class="text-center mb-3" align="center">
-   <a href="https://github.com/itsprathvi/skyBeatz/"><img height="200" width="300" alt="Powered by Android" src="https://i.ytimg.com/vi/beaIcbHBUqg/maxresdefault.jpg"></a>
+   <a href="https://github.com/itsprathvi/skyBeatz/"><img height="300" width="100" alt="Powered by Android" src="https://www.nicepng.com/png/full/300-3009128_download-andro-android-os-logo-png.png"></a>
 </p>
 
 <p align="center">
-    Spotify clone music app created by the team of three called Pcube Developers. Main this App is developed for android mobiles, We used Java as a main programming language and XML for designing the templates in Android Studio. In this App You can search for a song and artists so that you can listen and wibe in the mood of Skybeatz Songs. Thankyou for Spotify for giving us API. It's a  Great App, Everyone need to install and try it Once
+    Spotify clone music app created by the team of three called Pcube Developers. Mainly this App is developed for android mobiles, We used Java as a main programming language and XML for designing the templates in Android Studio. In this App You can search for a song and artists so that you can listen and wibe in the mood of Skybeatz Songs. Thankyou for Spotify for giving us API. It's a  Great App, Everyone need to install and try it Once
 </p>
